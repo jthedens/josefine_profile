@@ -10,7 +10,20 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+
+    <ul class="list-inline tabs-underlined">
+      <li>
+        <a href="#" class="tab-underlined active">About</a>
+      </li>
+      <li>
+        <a href="#" class="tab-underlined">Projects</a>
+      </li>
+      <li>
+        <a href="#" class="tab-underlined">Contact</a>
+      </li>
+    </ul>
     <%= yield %>
+
     <%= javascript_include_tag 'application' %>
 
     <%= javascript_pack_tag 'application' %>
