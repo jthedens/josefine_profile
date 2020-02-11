@@ -3,25 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>JTS</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <%= render 'shared/navbar' %>
 
-    <ul class="list-inline tabs-underlined">
-      <li>
-        <a href="#" class="tab-underlined active">About</a>
-      </li>
-      <li>
-        <a href="#" class="tab-underlined">Projects</a>
-      </li>
-      <li>
-        <a href="#" class="tab-underlined">Contact</a>
-      </li>
-    </ul>
     <%= yield %>
 
     <%= javascript_include_tag 'application' %>

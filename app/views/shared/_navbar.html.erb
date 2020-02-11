@@ -1,0 +1,14 @@
+<ul class="list-inline tabs-underlined">
+  <li>
+    <%= link_to "Home", root_path, :class => active_class?(root_path)  %>
+  </li>
+  <li>
+    <%= link_to "About", about_path, :class => active_class?(about_path)  %>
+  </li>
+  <li>
+    <%= link_to "Projects", projects_path, :class => active_class?(projects_path) %>
+  </li>
+  <li>
+    <%= link_to "Contact", contact_path, :class => active_class?(contact_path) %>
+  </li>
+</ul>
