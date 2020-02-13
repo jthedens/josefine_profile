@@ -1,7 +1,13 @@
 .btn-turquoise {
-    background-color: $mid-turquoise;
-    color: white;
+  background-color: $mid-turquoise;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #357376b8;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 16px;
+    color: white;
+    }
 }
