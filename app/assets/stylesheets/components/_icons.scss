@@ -1,4 +1,19 @@
-.fa-terminal {
+.fas {
   color: #d45b8a;
+  font-size: 20px;
+  padding-left: 5px;
   padding-right: 5px;
+}
+
+.follow-icon {
+  color: $mid-green;
+  font-size: 46px;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  &:hover {
+    text-decoration: none;
+    color: #357376bd;
+    text-shadow: 2px 2px 2px #0e000026;
+  }
 }
