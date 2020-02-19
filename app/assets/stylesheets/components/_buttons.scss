@@ -1,12 +1,14 @@
 .btn-turquoise {
-  background-color: $mid-green;
-  color: white;
+  background-color: transparent;
+  border: 1px solid #357376;
+  color: $mid-green;
+  font-weight: bold;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
 
   &:hover {
-    background-color: #357376b8;
+    background-color: #357376;
     text-decoration: none;
     color: white;
     }

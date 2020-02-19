@@ -1,0 +1,81 @@
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.project-card {
+  overflow: hidden;
+  height: 420px;
+  background: #ffffff94;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  position: relative;
+}
+
+.project-card img {
+  height: 200px;
+  width: 90%;
+  object-fit: fill;
+  margin: 5%;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.project-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  // margin:;
+}
+
+.project-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+}
+
+.project-card .project-card-infos {
+  padding: 16px;
+}
+
+.project-button {
+  position: absolute;
+  bottom: 5%;
+}
+
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

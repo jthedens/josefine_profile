@@ -1,8 +1,50 @@
-<div class="text-center mt-4">
-<br>
-<br>
-  <h1>
-    <i class="fas fa-paint-roller"></i>
-    Work in progress ...
-  </h1>
+<div class="container">
+  <div class="text-center mb-5">
+    <h2>Here are some of my projects I created so far:</h2>
+  </div>
+
+  <div class="projects">
+      <div class="project-card">
+        <%= image_tag "night-watch.png", alt: "NightWatch" %>
+        <div class="project-card-infos">
+          <h3>NightWatch</h3>
+          <p>A social network where users can recommend movies to each other and create personal watchlists:
+            built with JavaScript, Ruby on Rails, Ajax, HTML and CSS whilst also working as a team on Github/Heroku.
+          </p>
+          <div class="project-button">
+            <%= link_to "Go visit", "http://www.night-watch.co", target: "_blank", class: "btn-turquoise"  %>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <%= image_tag "family-time.png", alt: "FamilyTime" %>
+        <div class="project-card-infos">
+          <h3>FamilyTime</h3>
+          <p>AirBnB-style platform to book a family stay.
+              App implemented searching and geocoding in Rails.
+            </p>
+          <div class="project-button">
+            <%= link_to "Go visit", "https://family-timeee.herokuapp.com/", target: "_blank", class: "btn-turquoise"  %>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <%= image_tag "cocktail-shaker.png", alt: "CocktailShaker" %>
+        <div class="project-card-infos">
+          <h3>CocktailShaker</h3>
+          <p></p>
+          <div class="project-button">
+            <%= link_to "Go visit", "http://cocktailshaker.herokuapp.com/", target: "_blank", class: "btn-turquoise"  %>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <h2>more to come...</h2>
+  </div>
+
 </div>
+
