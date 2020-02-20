@@ -8,10 +8,9 @@ class MessagesController < ApplicationController
 
     if @message.valid?
       MessageMailer.contact(@message).deliver_now
-      redirect_to new_message_path, notice: "Thank you for your message ! I will get back to you soon"
-      @message.save
+      redirect_to :root, notice: "Thank you for your message. I will be in touch soon!"
+      # @message.save
     else
-      flash[:notice] = "There was an error sending your message. Please try again."
       render :new
     end
   end
