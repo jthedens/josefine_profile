@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'projects', to: 'pages#projects', as: :projects
 
   get 'contact', to: 'messages#new', as: :contact
-  post 'messages', to: 'messages#create'
+  post 'messages', to: 'messages#create', as: 'create_message'
 end

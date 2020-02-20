@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h2>Contact me</h2>
+  <div class="mt-4">
+    <%= simple_form_for @message, url: create_message_url do |f| %>
+      <%= f.input :name, label: 'Full Name' %>
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :email, label: 'Email' %>
+        </div>
+        <div class="col-6">
+          <%= f.input :phone_number, label: 'Phone Number' %>
+        </div>
+      </div>
+      <%= f.input :body, label: 'Message', as: :text, input_html: { rows: 5 } %>
+      <%= f.submit 'Send message', class: 'btn-turquoise' %>
+    <% end %>
+  </div>
+</div>
