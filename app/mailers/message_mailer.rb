@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-  require 'mailgun'
+  require 'mailgun-ruby'
 
   def contact(message)
     @name = message.name
