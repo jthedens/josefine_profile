@@ -2,8 +2,8 @@ class MessageMailer < ApplicationMailer
   require 'mailgun'
 
   def contact(message)
-    @name = message.name
-    @body = message.body
+    # @name = message.name
+    # @body = message.body
 
     mg_client = Mailgun::Client.new ENV['mailgun_secret_api_key']
     message_params = { from: message.email,
