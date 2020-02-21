@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
     if @message.valid?
       MessageMailer.contact(@message).deliver_now
       redirect_to :root, notice: "Thank you for your message. I will be in touch soon!"
-      # @message.save
+      @message.save
     else
       render :new
     end
