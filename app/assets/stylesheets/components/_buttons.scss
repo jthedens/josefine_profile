@@ -13,3 +13,20 @@
     color: white;
     }
 }
+
+
+.btn-submit {
+  background-color: #357376;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #357376;
+    color: $mid-green;
+  }
+}

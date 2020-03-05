@@ -4,20 +4,21 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
-
-    if @message.valid?
-      MessageMailer.contact(@message).deliver_now
-      redirect_to :root, notice: "Thank you for your message. I will be in touch soon!"
-      @message.save
+    @message = Message.new(messages_params)
+    if @message.save
+      ApplicationMailer.general_message(@message).deliver_now
+      redirect_to root_path, notice: "Thanks for contacting me"
     else
-      render :new
+      redirect_to root_path, alert: "Something went wrong"
     end
+  end
+
+  def disclaimer
   end
 
   private
 
-  def message_params
-    params.require(:message).permit(:name, :email, :phone_number, :body)
+  def messages_params
+    params.require(:message).permit(:name, :email, :message)
   end
 end
