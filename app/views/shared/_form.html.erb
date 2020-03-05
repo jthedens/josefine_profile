@@ -1,0 +1,23 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-lg-6">
+    <%= simple_form_for @message  do |f| %>
+      <% if @message.errors.any? %>
+        <div id="error_explanation">
+          <h3><%= pluralize(@message.errors.count, "error") %> prohibited this contact from being saved:</h3>
+          <ul>
+            <% @message.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    ​
+      <form>
+        <%= f.input :name %>
+        <%= f.input :email %>
+        <%= f.input :message, as: :text %>
+        <%= f.button :submit, class: "btn-submit" %>
+      </form>
+    <% end %>
+  </div>
+​</div>

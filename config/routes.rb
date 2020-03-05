@@ -6,6 +6,5 @@ Rails.application.routes.draw do
   get 'projects', to: 'pages#projects', as: :projects
   get 'contact', to: 'pages#contact', as: :contact
 
-  get 'message', to: 'messages#new', as: 'new_message'
-  post 'messages', to: 'messages#create', as: 'create_message'
+  resources :messages, only: [:new, :create]
 end
