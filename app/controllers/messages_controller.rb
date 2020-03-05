@@ -7,9 +7,11 @@ class MessagesController < ApplicationController
     @message = Message.new(messages_params)
     if @message.save
       ApplicationMailer.general_message(@message).deliver_now
-      redirect_to root_path, notice: "Thanks for contacting me"
+      flash[:alert] = "Thanks for contacting me!"
+      redirect_to root_path
     else
-      redirect_to root_path, alert: "Something went wrong"
+      flash[:alert] = "Sorry, something went wrong!"
+      render 'pages/contact'
     end
   end
 
