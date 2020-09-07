@@ -4,6 +4,6 @@ class ApplicationMailer < ActionMailer::Base
 
   def general_message(contact)
     @message = contact
-    mail(from: @message.email, to: "josefine.thedenschow@gmail.com", subject: "Message for Profilepage", name: @message.name, message: @message.message)
+    mail(from: @message.email, to: "#{@my_email}", subject: "Message for Profilepage", name: @message.name, message: @message.message)
   end
 end

@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(messages_params)
+    @my_email = ENV["EMAIL_USER"]
     if @message.save
       ApplicationMailer.general_message(@message).deliver_now
       flash[:alert] = "Thanks for contacting me!"

@@ -10,5 +10,6 @@ class PagesController < ApplicationController
 
   def contact
     @message = Message.new
+    @email = ENV["EMAIL_USER"]
   end
 end
